@@ -1,0 +1,201 @@
+body,
+h1 {
+  text-align: center;
+}
+
+body {
+  font-size: 10px;
+}
+
+h1 {
+  font-family: 'Comfortaa',cursive;
+  font-size: 3rem;
+}
+
+.fa {
+  color: #888;
+}
+
+.popup {
+  width: 170px;
+  height: 400px;
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 38px;
+  transform: translateX(120px);
+  -webkit-transition: all .8s;
+  -moz-transition: all .8s;
+  -ms-transition: all .8s;
+  -o-transition: all .8s;
+  transition: all .8s;
+}
+
+.popup-menu {
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  font-size: 4rem;
+  list-style-type: none;
+}
+
+.popup .border {
+  border-bottom: 1px #ccc solid;
+  position: relative;
+  top: 5rem;
+  visibility: hidden;
+}
+
+.popup .item {
+  margin-bottom: 3.5rem;
+  cursor: pointer;
+}
+
+.popup .item :hover,
+.popup-close :hover,
+.popup-open :hover {
+  color: #000;
+}
+
+.popup-close,
+.popup-open {
+  position: absolute;
+  top: .5rem;
+  font-size: 3rem;
+}
+
+.popup-open {
+  text-decoration: none;
+  transition-delay: .8s;
+  left: 1rem;
+  visibility: visible;
+}
+
+.popup-close {
+  left: 1.3rem;
+  visibility: hidden;
+  transition: all .8s;
+}
+
+.popup-close,
+.popup-close:hover,
+.popup-open:hover {
+  text-decoration: none;
+}
+
+.popup-overlay {
+  background-color: rgba(0,0,0,.4);
+  transition: all .2s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+}
+
+.popup-overlay:target {
+  visibility: visible;
+}
+
+.popup-overlay:target+.popup {
+  transform: translateX(0);
+}
+
+.popup-overlay:target+.popup .popup-close {
+  visibility: visible;
+  transform: translateX(250%);
+}
+
+.popup-overlay:target+.popup .popup-open {
+  transition-delay: 0s;
+  visibility: hidden;
+}
+
+.popup-overlay:target+.popup .border {
+  visibility: visible;
+}
+
+.sign {
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 2.5rem;
+}
+
+.sign a {
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #444;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+  color: #777;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.sign a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.sign a:hover:focus,
+.sign a:hover:link {
+  text-decoration: none;
+}
+
+.demo {
+  vertical-align: middle;
+  margin: auto;
+  margin-top: -10rem;
+  width: 60%;
+  height: 80%;
+  background-color: #eee;
+  box-shadow: 0 10px 30px 0 rgba(168,173,187,.4);
+  display: none;
+  transform: translateX(0%);
+  transition: all 1.8s;
+}
+
+.demo-close {
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #666;
+  transition: all .8s;
+}
+
+.demo-close :hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.demo-close:focus,
+.demo-close:link {
+  color: #000;
+  text-decoration: none;
+}
+
+.demo-overlay {
+  background-color: rgba(0,0,0,.6);
+  transition: all .2s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+}
+
+.demo-overlay:target {
+  visibility: visible;
+}
+
+.demo-overlay:target+.demo {
+  display: block;
+}
